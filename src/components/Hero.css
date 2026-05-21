@@ -274,8 +274,8 @@
 .hero-collage-container {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  height: 400px;
+  max-width: 600px;
+  height: 520px;
   margin: 0 auto;
 }
 
@@ -318,10 +318,10 @@
 /* The Core Ken Burns Slider Frame */
 .hero-slider-frame {
   position: absolute;
-  top: 8%;
-  left: 8%;
-  width: 84%;
-  height: 84%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 4px solid var(--border-glass);
@@ -488,19 +488,19 @@
 
 /* Positionings */
 .card-meals {
-  top: -2%;
-  left: -8%;
+  top: -4%;
+  left: -4%;
   border-left: 4px solid var(--color-saffron);
 }
 
 .card-rescues {
   top: 36%;
-  right: -8%;
+  right: -4%;
   border-left: 4px solid var(--color-green);
 }
 
 .card-students {
-  bottom: -2%;
+  bottom: -4%;
   left: 6%;
   border-left: 4px solid var(--color-gold);
 }
