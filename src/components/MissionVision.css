@@ -1,0 +1,233 @@
+/* Mission & Vision Styles */
+.mission-vision-section {
+  position: relative;
+  background-color: rgba(250, 246, 240, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+  .mission-vision-section {
+    background-color: rgba(21, 24, 31, 0.3);
+  }
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius-full);
+  margin-top: 16px;
+  border-color: rgba(230, 81, 0, 0.1);
+  background: rgba(255, 255, 255, 0.5);
+}
+@media (prefers-color-scheme: dark) {
+  .lang-switcher {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.lang-btn {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-mid));
+  color: var(--text-white);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Cards Layout */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.card-item {
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-glass);
+}
+
+.card-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Accent Lines */
+.card-accent-saffron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-saffron), var(--color-gold));
+}
+
+.card-accent-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-green), var(--color-green-mid));
+}
+
+/* Header inside Card */
+.card-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-box.saffron-glow {
+  background-color: rgba(230, 81, 0, 0.08);
+}
+
+.icon-box.green-glow {
+  background-color: rgba(27, 94, 32, 0.08);
+}
+
+.saffron-color { color: var(--color-saffron); }
+.green-color { color: var(--color-green); }
+
+.card-title-group h3 {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.spiritual-tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.spiritual-tag.saffron { color: var(--color-saffron); }
+.spiritual-tag.green { color: var(--color-green); }
+
+/* Card Body Content */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.lang-block {
+  position: relative;
+  padding: 0 16px;
+  text-align: justify;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  color: var(--color-saffron-mid);
+  opacity: 0.25;
+  position: absolute;
+  left: -4px;
+  top: -16px;
+  line-height: 1;
+}
+
+.quote-mark-end {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  color: var(--color-saffron-mid);
+  opacity: 0.25;
+  position: absolute;
+  right: -4px;
+  bottom: -28px;
+  line-height: 1;
+}
+
+.green-card .quote-mark,
+.green-card .quote-mark-end {
+  color: var(--color-green-mid);
+}
+
+.lang-block p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.lang-block.hindi-text p {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+.bilingual-divider {
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  padding-top: 24px;
+}
+@media (prefers-color-scheme: dark) {
+  .bilingual-divider {
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Card Footer Decor */
+.card-footer-decor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 18px;
+}
+@media (prefers-color-scheme: dark) {
+  .card-footer-decor {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+  }
+}
+
+.decor-sparkle {
+  color: var(--color-gold);
+  animation: logoSparkle 3s infinite alternate;
+}

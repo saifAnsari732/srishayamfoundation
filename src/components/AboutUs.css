@@ -1,0 +1,249 @@
+/* About Us Section Styles */
+.about-section {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+@media (prefers-color-scheme: dark) {
+  .about-section {
+    background-color: rgba(21, 24, 31, 0.2);
+  }
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.about-sub-title {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  text-align: left;
+  position: relative;
+  padding-left: 14px;
+}
+
+.about-sub-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background: var(--color-saffron);
+  border-radius: var(--radius-full);
+}
+
+.about-content-right .about-sub-title::before {
+  background: var(--color-green);
+}
+
+.about-para {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Directors profile card */
+.directors-card {
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-glass);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.director-profile-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+@media (max-width: 576px) {
+  .director-profile-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.director-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-saffron), var(--color-gold));
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.director-profile-item:nth-child(3) .director-avatar {
+  background: linear-gradient(135deg, var(--color-green), var(--color-green-mid));
+}
+
+.director-info {
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .director-info {
+    text-align: center;
+  }
+}
+
+.director-info h4 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.director-info p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.director-profile-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+@media (prefers-color-scheme: dark) {
+  .director-profile-divider {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Right legitimacy cards */
+.legitimacy-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legit-card {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all var(--transition-fast);
+}
+
+.legit-card:hover {
+  transform: translateX(4px);
+  background: var(--bg-secondary);
+}
+
+.legit-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.legit-icon.saffron { color: var(--color-saffron-mid); }
+.legit-icon.green { color: var(--color-green-mid); }
+
+.legit-text {
+  text-align: left;
+}
+
+.legit-text h5 {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.legit-text p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.legit-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  margin-top: 6px;
+}
+
+.legit-badge.green {
+  color: var(--color-green);
+  background: rgba(27, 94, 32, 0.08);
+}
+
+.capitals-list {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.capitals-list strong {
+  color: var(--text-primary);
+}
+
+/* Bottom Callout banner */
+.Lucknow-callout {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-secondary);
+  border-color: rgba(230, 81, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+}
+@media (prefers-color-scheme: dark) {
+  .Lucknow-callout {
+    background: rgba(21, 24, 31, 0.6);
+  }
+}
+
+@media (max-width: 768px) {
+  .Lucknow-callout {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+}
+
+.callout-icon {
+  color: var(--color-saffron);
+}
+
+.Lucknow-callout strong {
+  color: var(--text-primary);
+  margin-left: 4px;
+}

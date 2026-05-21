@@ -1,0 +1,102 @@
+/* App Global & Floating Widgets CSS */
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Sticky Support Floaters */
+.quick-action-floater {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 90;
+}
+
+.float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.float-donate {
+  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-mid));
+}
+.float-donate:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px -5px rgba(230, 81, 0, 0.4);
+}
+
+.float-volunteer {
+  background: linear-gradient(135deg, var(--color-green), var(--color-green-mid));
+}
+.float-volunteer:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px -5px rgba(27, 94, 32, 0.4);
+}
+
+.float-label {
+  position: absolute;
+  right: 60px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all var(--transition-normal);
+  pointer-events: none;
+  border: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .float-label {
+    background: var(--bg-secondary);
+    border-color: var(--border-glass);
+  }
+}
+
+.float-btn:hover .float-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .quick-action-floater {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+  
+  .float-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .float-label {
+    display: none; /* Hide labels on mobile to avoid screen overlap */
+  }
+}

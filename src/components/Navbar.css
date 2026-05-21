@@ -1,0 +1,338 @@
+/* ==========================================================================
+   Shri Shri Shyam Foundation - Premium Floating Sticky Navigation System
+   ========================================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0; /* Flush with top edge - no gap */
+  left: 2rem;  /* 2rem margin from left screen edge */
+  right: 2rem; /* 2rem margin from right screen edge */
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-normal);
+  background: rgba(250, 246, 240, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 81, 0, 0.1);
+  border-top: none; /* No top border where it touches the edge */
+  border-radius: 0 0 var(--radius-md) var(--radius-md); /* Curved only at bottom */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(15, 17, 21, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-top: none;
+  }
+}
+
+.navbar.scrolled {
+  top: 0; /* Keep flush with top when scrolling */
+  height: 72px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 35px rgba(230, 81, 0, 0.08);
+  border-color: rgba(230, 81, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar.scrolled {
+    background: rgba(21, 24, 31, 0.95);
+    border-color: rgba(255, 112, 67, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem; /* Exact 2rem padding on the left and right inside the container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   Logo Brand Styling
+   ========================================================================== */
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  border-radius: 50%; /* Circle brand mark */
+  box-shadow: 0 4px 10px rgba(230, 81, 0, 0.08);
+  border: 1.5px solid rgba(230, 81, 0, 0.15);
+  font-size: 26px;
+  transition: all var(--transition-normal);
+}
+
+.nav-logo:hover .logo-icon-wrapper {
+  transform: rotate(12deg) scale(1.06);
+  box-shadow: 0 8px 24px -5px rgba(230, 81, 0, 0.25);
+  border-color: var(--color-saffron);
+}
+
+.logo-sparkle-1, .logo-sparkle-2 {
+  position: absolute;
+  color: var(--color-gold);
+  pointer-events: none;
+}
+
+.logo-sparkle-1 {
+  top: -2px;
+  right: -2px;
+  animation: logoSparkle 3s infinite alternate;
+}
+
+.logo-sparkle-2 {
+  bottom: -2px;
+  left: -2px;
+  animation: logoSparkle 2s infinite alternate-reverse;
+}
+
+@keyframes logoSparkle {
+  0% { transform: scale(0.6) rotate(0deg); opacity: 0.5; }
+  100% { transform: scale(1.1) rotate(180deg); opacity: 1; }
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  line-height: 1.1;
+  transition: color var(--transition-fast);
+}
+
+.nav-logo:hover .brand-main {
+  color: var(--color-saffron);
+}
+
+.brand-sub {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--color-saffron-mid);
+  line-height: 1.1;
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   Desktop Navigation Links
+   ========================================================================== */
+
+.nav-menu-desktop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  letter-spacing: 0.1px;
+}
+
+.nav-link:hover {
+  color: var(--color-saffron);
+  background: rgba(230, 81, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-link:hover {
+    color: var(--color-saffron-mid);
+    background: rgba(255, 112, 67, 0.08);
+  }
+}
+
+/* CTA Navigation Buttons */
+.nav-btn-volunteer {
+  background: rgba(230, 81, 0, 0.05) !important;
+  color: var(--color-saffron) !important;
+  border: 1.5px solid rgba(230, 81, 0, 0.2) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 8px 18px !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: none !important;
+  transition: all 0.25s ease !important;
+  white-space: nowrap;
+}
+
+.nav-btn-volunteer:hover {
+  background: rgba(230, 81, 0, 0.1) !important;
+  border-color: var(--color-saffron) !important;
+  transform: translateY(-1.5px);
+}
+
+.nav-btn-donate {
+  background: linear-gradient(135deg, var(--color-saffron), var(--color-gold)) !important;
+  color: var(--text-white) !important;
+  border: none !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  padding: 9px 20px !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: 0 4px 15px rgba(230, 81, 0, 0.15) !important;
+  transition: all 0.25s ease !important;
+  white-space: nowrap;
+}
+
+.nav-btn-donate:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(230, 81, 0, 0.3) !important;
+  filter: brightness(1.05);
+}
+
+/* ==========================================================================
+   Mobile Burger Toggle & Drawer
+   ========================================================================== */
+
+.nav-toggle {
+  display: none;
+  background: rgba(230, 81, 0, 0.04);
+  border: 1px solid rgba(230, 81, 0, 0.1);
+  color: var(--color-saffron-mid);
+  cursor: pointer;
+  z-index: 101;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(230, 81, 0, 0.1);
+  border-color: var(--color-saffron);
+  transform: scale(1.05);
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  z-index: 99;
+  padding: 110px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: right var(--transition-slow);
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid var(--border-glass);
+}
+
+.nav-menu-mobile.glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-menu-mobile.glass {
+    background: rgba(21, 24, 31, 0.96);
+  }
+}
+
+.nav-menu-mobile.open {
+  right: 0;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mobile-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 10px 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(230, 81, 0, 0.05);
+  transition: all var(--transition-fast);
+}
+
+.mobile-link:hover {
+  color: var(--color-saffron);
+  padding-left: 8px;
+}
+
+.mobile-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Responsive & Adaptive Media Queries
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .nav-menu-desktop {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .navbar {
+    top: 0; /* No top gap on tablets */
+    left: 1rem;
+    right: 1rem;
+    border-radius: 0 0 var(--radius-md) var(--radius-md); /* Curved only at bottom */
+  }
+  
+  .navbar.scrolled {
+    top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    top: 0; /* No top gap on mobile */
+    left: 0.75rem;
+    right: 0.75rem;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm); /* Compact curved bottom */
+  }
+  
+  .navbar.scrolled {
+    top: 0;
+  }
+}
