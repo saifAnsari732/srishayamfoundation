@@ -38,10 +38,6 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
         <div className="footer-col brand-col">
           <a href="#" className="footer-logo" onClick={handleScrollToTop}>
             <img src="/logo.png" alt="Sri Syam Foundation Logo" className="footer-logo-img" />
-            <div className="footer-logo-text">
-              <span className="f-brand-main">SHRI SHRI SHYAM</span>
-              <span className="f-brand-sub">SEWA PARIVAR FOUNDATION</span>
-            </div>
           </a>
           <p className="footer-motto">
             “नर सेवा ही नारायण सेवा है, भोजन दान ही महादान है।” <br />

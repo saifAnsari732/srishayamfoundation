@@ -42,10 +42,6 @@ export default function Navbar({ onDonateClick, onVolunteerClick }) {
       <div className="nav-container">
         <a href="#" className="nav-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <img src="/logo.png" alt="Sri Syam Foundation Logo" className="navbar-logo-img" />
-          <div className="logo-text">
-            <span className="brand-main">SHRI SHRI SHYAM</span>
-            <span className="brand-sub">SEWA PARIVAR FOUNDATION</span>
-          </div>
         </a>
 
         {/* Desktop Menu */}
