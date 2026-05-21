@@ -37,7 +37,7 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
         {/* Col 1: Brand & Motto */}
         <div className="footer-col brand-col">
           <a href="#" className="footer-logo" onClick={handleScrollToTop}>
-            <span className="footer-peacock">🦚</span>
+            <img src="/logo.png" alt="Sri Syam Foundation Logo" className="footer-logo-img" />
             <div className="footer-logo-text">
               <span className="f-brand-main">SHRI SHRI SHYAM</span>
               <span className="f-brand-sub">SEWA PARIVAR FOUNDATION</span>

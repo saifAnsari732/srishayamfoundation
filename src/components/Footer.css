@@ -62,8 +62,16 @@
   margin-bottom: 20px;
 }
 
-.footer-peacock {
-  font-size: 28px;
+.footer-logo-img {
+  width: auto;
+  height: 52px;
+  max-width: 140px;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.footer-logo:hover .footer-logo-img {
+  transform: scale(1.05);
 }
 
 .footer-logo-text {

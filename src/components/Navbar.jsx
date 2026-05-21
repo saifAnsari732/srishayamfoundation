@@ -41,11 +41,7 @@ export default function Navbar({ onDonateClick, onVolunteerClick }) {
     <nav className={`navbar ${scrolled ? 'scrolled glass' : ''}`}>
       <div className="nav-container">
         <a href="#" className="nav-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <span className="logo-icon-wrapper">
-            <Sparkles className="logo-sparkle-1" size={16} />
-            <span className="peacock-icon">🦚</span>
-            <Sparkles className="logo-sparkle-2" size={12} />
-          </span>
+          <img src="/logo.png" alt="Sri Syam Foundation Logo" className="navbar-logo-img" />
           <div className="logo-text">
             <span className="brand-main">SHRI SHRI SHYAM</span>
             <span className="brand-sub">SEWA PARIVAR FOUNDATION</span>
