@@ -16,23 +16,23 @@ export default function Hero({ onDonateClick, onVolunteerClick }) {
   const heroPillars = [
     {
       icon: "🍲",
-      title: "मानव सेवा",
-      subtitle: "Human Welfare",
-      desc: "निशुल्क भोजन वितरण (भंडारा), निर्धन शिक्षा व चिकित्सा सहयोग कार्य।",
+      title: "दैनिक भंडारा",
+      subtitle: "Daily Meals",
+      desc: "निशुल्क भोजन वितरण, निर्धन व असहाय लोगों के लिए शुद्ध सात्विक प्रसाद।",
       class: "saffron"
     },
     {
-      icon: "🐾",
-      title: "जीव दया",
-      subtitle: "Animal Care",
-      desc: "असहाय बेजुबान पशुओं का उपचार, दैनिक चारा-पानी व सुरक्षित आश्रय।",
-      class: "green"
+      icon: "🩺",
+      title: "स्वास्थ्य सेवा",
+      subtitle: "Healthcare Aid",
+      desc: "निशुल्क स्वास्थ्य शिविर, दवा वितरण व गंभीर रोगियों का चिकित्सा सहयोग।",
+      class: "maroon"
     },
     {
-      icon: "🕉️",
-      title: "भक्ति व चेतना",
-      subtitle: "Spiritual Focus",
-      desc: "बाबा श्याम संकीर्तन, धार्मिक-सामाजिक उत्सव व परोपकार प्रचार।",
+      icon: "📚",
+      title: "शिक्षा व स्वावलंबन",
+      subtitle: "Education & Livelihood",
+      desc: "निर्धन बच्चों की शिक्षा व महिलाओं के स्वरोजगार हेतु निरंतर आर्थिक सहयोग।",
       class: "gold"
     }
   ];
@@ -47,25 +47,24 @@ export default function Hero({ onDonateClick, onVolunteerClick }) {
   return (
     <header id="hero" className="hero-section">
       <div className="bg-pulse-saffron" style={{ top: '25%', left: '5%' }}></div>
-      <div className="bg-pulse-green" style={{ bottom: '25%', right: '5%' }}></div>
+      <div className="bg-pulse-maroon" style={{ bottom: '25%', right: '5%' }}></div>
       
       <div className="container hero-container">
         {/* Left Side: Content */}
         <div className="hero-content">
           <div className="hero-badge glass">
             <Sparkles size={14} className="badge-icon" />
-            <span>मानव सेवा एवं जीव संरक्षण फाउंडेशन</span>
+            <span>दैनिक भंडारा एवं जनकल्याण फाउंडेशन</span>
           </div>
 
           <h1 className="hero-title">
             नर सेवा ही <span className="highlight saffron">नारायण सेवा</span> है, <br />
-            जीव दया ही <span className="highlight green">परम धर्म</span> है।
+            भोजन दान ही <span className="highlight maroon">महादान</span> है।
           </h1>
 
           <p className="hero-description">
             श्री श्री श्याम सेवा परिवार फाउंडेशन (Lucknow) का पावन संकल्प: समाज के वंचित वर्ग को शिक्षा, 
-            भोजन व रोजगार से आत्मनिर्भर बनाना, तथा असहाय व मूक पशुओं को चिकित्सा, भोजन व आश्रय प्रदान कर 
-            करुणा की गंगा बहाना।
+            स्वास्थ्य, भोजन व रोजगार से आत्मनिर्भर बनाना, तथा असहाय लोगों तक नित्य सात्विक भंडारा प्रसाद पहुंचाना।
           </p>
 
           {/* Three Core Focus Pillars */}
@@ -99,7 +98,7 @@ export default function Hero({ onDonateClick, onVolunteerClick }) {
               <span>पंजीकृत संस्था (Regd. NGO)</span>
             </div>
             <div className="meta-item">
-              <ShieldAlert className="meta-icon green" size={20} />
+              <ShieldAlert className="meta-icon maroon" size={20} />
               <span>100% करमुक्त दान (Tax Exempt)</span>
             </div>
           </div>
@@ -145,10 +144,10 @@ export default function Hero({ onDonateClick, onVolunteerClick }) {
             </div>
 
             <div className="floating-counter-card card-rescues glass">
-              <div className="counter-icon-wrapper green-bg">🐾</div>
+              <div className="counter-icon-wrapper maroon-bg">🩺</div>
               <div className="counter-info">
-                <span className="counter-number">4,200+</span>
-                <span className="counter-label">पशु उपचार (Rescues)</span>
+                <span className="counter-number">2,500+</span>
+                <span className="counter-label">चिकित्सा सहायता (Medical)</span>
               </div>
             </div>
 

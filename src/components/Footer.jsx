@@ -44,8 +44,8 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
             </div>
           </a>
           <p className="footer-motto">
-            “नर सेवा ही नारायण सेवा है, जीव दया ही परम धर्म है।” <br />
-            बाबा श्याम की पावन प्रेरणा से जरूरतमंदों के सशक्तिकरण और बेजुबान पशुओं के संरक्षण के प्रति समर्पित एक रजिस्टर्ड संस्था।
+            “नर सेवा ही नारायण सेवा है, भोजन दान ही महादान है।” <br />
+            बाबा श्याम की पावन प्रेरणा से जरूरतमंदों के सशक्तिकरण और नियमित भंडारा सेवा के प्रति समर्पित एक रजिस्टर्ड संस्था।
           </p>
           <div className="footer-social-icons">
             <a href="https://facebook.com/shrishyamsewaparivar" target="_blank" rel="noopener noreferrer" className="social-icon-btn fb" aria-label="Facebook">
@@ -89,7 +89,7 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
         <div className="footer-col actions-col">
           <h4 className="footer-col-title">पुण्य कार्य में भागीदार बनें</h4>
           <p className="footer-action-text">
-            फाउंडेशन के भंडारा, शिक्षा, गौ सेवा अथवा रेस्क्यू अभियानों में प्रत्यक्ष सहयोग देने हेतु:
+            फाउंडेशन के भंडारा, शिक्षा, स्वास्थ्य शिविर अथवा अन्य जन-सेवा अभियानों में प्रत्यक्ष सहयोग देने हेतु:
           </p>
           <div className="footer-ctas">
             <button className="btn btn-primary btn-sm w-full" onClick={onDonateClick}>
@@ -113,7 +113,7 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
               </div>
             </li>
             <li className="contact-list-item">
-              <Mail size={18} className="contact-icon green" />
+              <Mail size={18} className="contact-icon maroon" />
               <div className="contact-text-wrap">
                 <strong>आधिकारिक ईमेल:</strong>
                 <a href="mailto:shrishrishyamsewaparivar@gmail.com" className="email-link">
@@ -142,7 +142,7 @@ export default function Footer({ onDonateClick, onVolunteerClick }) {
               <Copyright size={14} /> {new Date().getFullYear()} श्री श्री श्याम सेवा परिवार फाउंडेशन। सर्वाधिकार सुरक्षित।
             </p>
             <p className="copyright-dev">
-              Made with <Heart size={10} fill="#ef4444" color="#ef4444" /> for Social Good & Animal Mercy.
+              Made with <Heart size={10} fill="#ef4444" color="#ef4444" /> for Social Good & Community Sewa.
             </p>
           </div>
         </div>

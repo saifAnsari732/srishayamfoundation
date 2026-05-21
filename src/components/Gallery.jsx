@@ -4,7 +4,7 @@ import './Gallery.css';
 
 export default function Gallery() {
   const [selectedImgIdx, setSelectedImgIdx] = useState(null);
-  const [filter, setFilter] = useState('all'); // 'all' | 'bhandara' | 'service'
+  const [filter, setFilter] = useState('all'); // 'all' | 'bhandara' | 'sewa'
 
   const images = [
     { src: "/1.jpeg", category: "bhandara", title: "श्री श्याम रसोई भंडारा", desc: "मौंदा, लखनऊ में जरूरतमंदों को निशुल्क भोजन वितरण" },
@@ -18,18 +18,18 @@ export default function Gallery() {
     { src: "/9.jpeg", category: "bhandara", title: "करुणा सेवा संकल्प", desc: "जरूरतमंदों तक स्नेहपूर्वक भोजन पहुंचाने का पावन संकल्प" },
     { src: "/V20210623_5125T01.JPG.jpeg", category: "bhandara", title: "पौष्टिक भोजन वितरण", desc: "गरीब व वंचित लोगों को सात्विक भंडारा वितरण" },
     { src: "/V20210623_5126T01.JPG.jpeg", category: "bhandara", title: "भंडारा प्रसाद वितरण", desc: "बाबा श्याम की प्रेरणा से मौंदा, लखनऊ में नित्य सेवा" },
-    { src: "/V20210623_5127T01.JPG.jpeg", category: "service", title: "जन-कल्याण सेवा", desc: "झुग्गी-झोपड़ियों व बस्तियों में जरूरतमंदों की सहायता" },
+    { src: "/V20210623_5127T01.JPG.jpeg", category: "sewa", title: "जन-कल्याण सेवा", desc: "झुग्गी-झोपड़ियों व बस्तियों में जरूरतमंदों की सहायता" },
     { src: "/V20210623_5128T01.JPG.jpeg", category: "bhandara", title: "गरम सात्विक भोजन", desc: "नित्य तैयार होने वाला स्वच्छ और पौष्टिक प्रसाद" },
     { src: "/V20210623_5129T01.JPG.jpeg", category: "bhandara", title: "सेवा दल वितरण कार्य", desc: "अनुशासित रूप से सभी तक प्रसाद पहुंचाने का कार्य" },
-    { src: "/V20210623_5130T01.JPG.jpeg", category: "service", title: "गरीब व वंचित सहायता", desc: "लखनऊ मौंदा के ग्रामीण इलाकों में राहत वितरण" },
+    { src: "/V20210623_5130T01.JPG.jpeg", category: "sewa", title: "गरीब व वंचित सहायता", desc: "लखनऊ मौंदा के ग्रामीण इलाकों में राहत वितरण" },
     { src: "/V20210623_5131T01.JPG.jpeg", category: "bhandara", title: "निशुल्क भंडारा", desc: "राहगीरों व निर्धनों के लिए भोजन पानी की उत्तम व्यवस्था" },
-    { src: "/V20210623_5133T01.JPG.jpeg", category: "service", title: "सहयोग एवं सहभागिता", desc: "स्थानीय नागरिकों के सहयोग से संचालित होने वाले कार्य" },
+    { src: "/V20210623_5133T01.JPG.jpeg", category: "sewa", title: "सहयोग एवं सहभागिता", desc: "स्थानीय नागरिकों के सहयोग से संचालित होने वाले कार्य" },
     { src: "/V20210623_5135T01.JPG.jpeg", category: "bhandara", title: "प्रसाद वितरण झलक", desc: "भंडारे में उमड़ा जनसैलाब एवं सेवा कार्य" },
     { src: "/V20210623_5136T01.JPG.jpeg", category: "bhandara", title: "सामुदायिक भंडारा सेवा", desc: "बच्चों व बुजुर्गों को आदर सहित भोजन सेवा" },
-    { src: "/V20210623_5137T01.JPG.jpeg", category: "service", title: "राहत सामग्री वितरण", desc: "कमजोर वर्ग के परिवारों को राशन व आवश्यक वस्तुओं का वितरण" },
+    { src: "/V20210623_5137T01.JPG.jpeg", category: "sewa", title: "राहत सामग्री वितरण", desc: "कमजोर वर्ग के परिवारों को राशन व आवश्यक वस्तुओं का वितरण" },
     { src: "/V20210623_5138T01.JPG.jpeg", category: "bhandara", title: "भोजन वितरण स्थल", desc: "लखनऊ के मौंदा ग्राम में सेवा शिविर की एक झलक" },
     { src: "/V20210623_5139T01.JPG.jpeg", category: "bhandara", title: "स्वच्छ भोजन सेवा", desc: "पूर्ण शुद्धता और शुचिता से तैयार भोजन का वितरण" },
-    { src: "/V20210623_5140T01.JPG.jpeg", category: "service", title: "करुणा व सेवा संकल्प", desc: "फाउंडेशन के सेवादारों द्वारा समर्पित जन-कार्य" }
+    { src: "/V20210623_5140T01.JPG.jpeg", category: "sewa", title: "करुणा व सेवा संकल्प", desc: "फाउंडेशन के सेवादारों द्वारा समर्पित जन-कार्य" }
   ];
 
   const filteredImages = filter === 'all' ? images : images.filter(img => img.category === filter);
@@ -75,10 +75,10 @@ export default function Gallery() {
               भंडारा सेवा (Bhandara)
             </button>
             <button 
-              className={`filter-btn ${filter === 'service' ? 'active' : ''}`}
-              onClick={() => setFilter('service')}
+              className={`filter-btn ${filter === 'sewa' ? 'active' : ''}`}
+              onClick={() => setFilter('sewa')}
             >
-              जन-सेवा कार्य (Social Service)
+              जन-सेवा कार्य (Community Sewa)
             </button>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function Gallery() {
               <div className={`lightbox-meta ${filteredImages[selectedImgIdx].category}`}>
                 <div className="lightbox-meta-header">
                   <span className={`lightbox-category-badge ${filteredImages[selectedImgIdx].category}`}>
-                    {filteredImages[selectedImgIdx].category === 'bhandara' ? '🍲 भोजन सेवा (Bhandara)' : '🤝 जन-कल्याण (Social Service)'}
+                    {filteredImages[selectedImgIdx].category === 'bhandara' ? '🍲 भोजन सेवा (Bhandara)' : '🤝 जन-कल्याण (Community Sewa)'}
                   </span>
                   <span className="lightbox-counter">
                     {selectedImgIdx + 1} / {filteredImages.length}

@@ -12,7 +12,7 @@ export default function MissionVision() {
         <div className="section-header">
           <span className="subtitle">हमारा संकल्प</span>
           <h2>लक्ष्य और दृष्टिकोण</h2>
-          <p>सेवा परमो धर्म: — मानवता और मूक प्राणियों की सेवा के प्रति हमारा पावन समर्पण।</p>
+          <p>सेवा परमो धर्म: — मानवता और समाज के निर्धन वर्ग की सेवा के प्रति हमारा पावन समर्पण।</p>
           
           {/* Language Switcher */}
           <div className="lang-switcher glass">
@@ -57,7 +57,7 @@ export default function MissionVision() {
                 <div className="lang-block hindi-text">
                   <span className="quote-mark">“</span>
                   <p>
-                    समाज के गरीब, जरूरतमंद और वंचित लोगों के जीवन स्तर को बेहतर बनाना तथा शिक्षा, स्वास्थ्य, भोजन, रोजगार और सामाजिक सहयोग के माध्यम से उन्हें आत्मनिर्भर बनाना। साथ ही बेजुबान पशुओं के संरक्षण, भोजन, चिकित्सा और आश्रय की व्यवस्था कर उनके प्रति करुणा और दया की भावना को समाज में बढ़ावा देना।
+                    समाज के गरीब, जरूरतमंद और वंचित लोगों के जीवन स्तर को बेहतर बनाना तथा शिक्षा, स्वास्थ्य, भोजन (भंडारा), रोजगार और सामाजिक सहयोग के माध्यम से उन्हें आत्मनिर्भर बनाना। हमारा उद्देश्य है कि समाज का कोई भी व्यक्ति भूखा न सोए और उसे सम्मानजनक जीवन जीने के अवसर प्राप्त हों।
                   </p>
                   <span className="quote-mark-end">”</span>
                 </div>
@@ -67,7 +67,7 @@ export default function MissionVision() {
                 <div className={`lang-block english-text ${lang === 'both' ? 'bilingual-divider' : ''}`}>
                   <span className="quote-mark">“</span>
                   <p>
-                    To uplift the standard of living of the poor, needy, and deprived sections of society, making them self-reliant through education, healthcare, nutrition, employment, and social support. Concurrently, to arrange for the conservation, feeding, medical care, and shelter of voiceless animals, thereby fostering a deep sense of compassion and kindness within the community.
+                    To uplift the standard of living of the poor, needy, and deprived sections of society, making them self-reliant through education, healthcare, nutrition (Bhandara), employment, and social support. Our goal is to ensure no one goes to bed hungry and everyone has the opportunity to live a life of dignity.
                   </p>
                   <span className="quote-mark-end">”</span>
                 </div>
@@ -82,14 +82,14 @@ export default function MissionVision() {
 
           {/* Card 2: Vision */}
           <div className="card-item vision-card glass">
-            <div className="card-accent-green"></div>
+            <div className="card-accent-maroon"></div>
             <div className="card-header-inner">
-              <div className="icon-box green-glow">
-                <Eye size={28} className="green-color" />
+              <div className="icon-box maroon-glow">
+                <Eye size={28} className="maroon-color" />
               </div>
               <div className="card-title-group">
                 <h3>विज़न / Vision</h3>
-                <span className="spiritual-tag green">संवेदनशील व समतामूलक समाज</span>
+                <span className="spiritual-tag maroon">संवेदनशील व समतामूलक समाज</span>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ export default function MissionVision() {
                 <div className="lang-block hindi-text">
                   <span className="quote-mark">“</span>
                   <p>
-                    एक ऐसा संवेदनशील और समतामूलक समाज बनाना जहाँ हर व्यक्ति को सम्मान, अवसर और आवश्यक सुविधाएँ प्राप्त हों तथा बेजुबान पशुओं की सुरक्षा और देखभाल सुनिश्चित हो, ताकि मानवता, करुणा और सेवा के मूल्यों पर आधारित एक बेहतर भविष्य का निर्माण हो सके।
+                    एक ऐसा संवेदनशील और समतामूलक समाज बनाना जहाँ हर व्यक्ति को सम्मान, अवसर और आवश्यक सुविधाएँ प्राप्त हों। हम एक ऐसे भविष्य की कल्पना करते हैं जहाँ मानवता, करुणा और परस्पर सेवा के मूल्यों पर आधारित एक सशक्त समाज का निर्माण हो।
                   </p>
                   <span className="quote-mark-end">”</span>
                 </div>
@@ -108,7 +108,7 @@ export default function MissionVision() {
                 <div className={`lang-block english-text ${lang === 'both' ? 'bilingual-divider' : ''}`}>
                   <span className="quote-mark">“</span>
                   <p>
-                    To establish a sensitive, empathetic, and egalitarian society where every individual is treated with dignity and granted access to equal opportunities and essential amenities, while guaranteeing the safety, protection, and overall well-being of voiceless animals, paving the way for a better future rooted in humanity, empathy, and service.
+                    To establish a sensitive, empathetic, and egalitarian society where every individual is treated with dignity and granted access to equal opportunities and essential amenities. We envision a future empowered by the values of humanity, compassion, and mutual service.
                   </p>
                   <span className="quote-mark-end">”</span>
                 </div>

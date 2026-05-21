@@ -42,7 +42,7 @@ export default function AboutUs() {
                 <div className="director-avatar">AS</div>
                 <div className="director-info">
                   <h4>श्री आनंद सेन यादव (संस्थापक व निदेशक)</h4>
-                  <p>पूर्व मंत्री एवं विधायक (Milkipur विधानसभा), उत्तर प्रदेश शासन। श्री आनंद सेन यादव अपने पूज्य पिता के जन-कल्याण के पदचिह्नों पर चलते हुए फाउंडेशन का कुशल नेतृत्व कर रहे हैं और गरीबों की समृद्धि व पशु कल्याण कार्यों को दिशा दे रहे हैं।</p>
+                  <p>पूर्व मंत्री एवं विधायक (Milkipur विधानसभा), उत्तर प्रदेश शासन। श्री आनंद सेन यादव अपने पूज्य पिता के जन-कल्याण के पदचिह्नों पर चलते हुए फाउंडेशन का कुशल नेतृत्व कर रहे हैं और गरीबों की समृद्धि व जन-सेवा कार्यों को दिशा दे रहे हैं।</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function AboutUs() {
                 <div className="legit-text">
                   <h5>स्थापना तिथि (Incorporation Date)</h5>
                   <p>13 मार्च, 2026</p>
-                  <span className="legit-badge green">सक्रिय (Active Entity)</span>
+                  <span className="legit-badge maroon">सक्रिय (Active Entity)</span>
                 </div>
               </div>
 
@@ -88,7 +88,7 @@ export default function AboutUs() {
 
               {/* Card 4: Compliance Status */}
               <div className="legit-card glass">
-                <ShieldCheck className="legit-icon green" size={24} />
+                <ShieldCheck className="legit-icon maroon" size={24} />
                 <div className="legit-text">
                   <h5>पारदर्शिता एवं सरकारी मान्यता</h5>
                   <p>कॉर्पोरेट कार्य मंत्रालय (Ministry of Corporate Affairs) द्वारा पंजीकृत व शत-प्रतिशत ऑडिट-युक्त वित्तीय प्रशासन।</p>

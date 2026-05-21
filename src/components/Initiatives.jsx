@@ -3,13 +3,12 @@ import { BookOpen, Stethoscope, HelpingHand, ShieldCheck, Heart, Sparkles } from
 import './Initiatives.css';
 
 export default function Initiatives({ onDonateClick }) {
-  const [filter, setFilter] = useState('all'); // 'all' | 'human' | 'animal'
+  const [filter, setFilter] = useState('all'); // 'all' | 'bhandara' | 'sewa'
 
   const items = [
-    // Human Welfare
     {
       id: 'bhandara',
-      category: 'human',
+      category: 'bhandara',
       icon: "🍲",
       image: "/V20210623_5125T01.JPG.jpeg",
       title: "दैनिक भंडारा सेवा (Nutritious Meals)",
@@ -18,70 +17,51 @@ export default function Initiatives({ onDonateClick }) {
       color: "var(--color-saffron)"
     },
     {
+      id: 'water',
+      category: 'bhandara',
+      icon: "💧",
+      title: "निशुल्क जल सेवा (Water Relief)",
+      desc: "भीषण गर्मी में राहगीरों और जरूरतमंदों के लिए स्वच्छ और ठंडे जल की व्यवस्था करना।",
+      impact: "दैनिक 2000+ लाभार्थी",
+      color: "var(--color-saffron)"
+    },
+    {
       id: 'education',
-      category: 'human',
+      category: 'sewa',
       icon: "📚",
       title: "शिक्षा सहयोग अभियान (Child Education)",
       desc: "निर्धन बच्चों को विद्यालयीय सामग्री (किताबें, बस्ते, वर्दी) प्रदान करना, कंप्यूटर साक्षरता देना, और उनकी ट्यूशन फीस प्रायोजित कर सशक्त बनाना।",
       impact: "1,800+ शिक्षित बच्चे",
-      color: "var(--color-saffron)"
+      color: "var(--color-gold)"
     },
     {
       id: 'health',
-      category: 'human',
+      category: 'sewa',
       icon: "🩺",
       image: "/V20210623_5137T01.JPG.jpeg",
-      title: "स्वास्थ्य व प्राथमिक चिकित्सा (Healthcare Support)",
+      title: "स्वास्थ्य व चिकित्सा सहयोग (Healthcare)",
       desc: "समय-समय पर निशुल्क स्वास्थ्य शिविरों का आयोजन, दवाइयां उपलब्ध करवाना, और गंभीर रोगियों को बड़े अस्पतालों में इलाज हेतु आर्थिक सहायता देना।",
       impact: "2,500+ लाभांवित मरीज",
-      color: "var(--color-saffron)"
+      color: "var(--color-maroon)"
     },
     {
       id: 'livelihood',
-      category: 'human',
+      category: 'sewa',
       icon: "💼",
       image: "/V20210623_5130T01.JPG.jpeg",
-      title: "महिला स्वावलंबन (Livelihood Assistance)",
+      title: "स्वावलंबन (Livelihood Assistance)",
       desc: "निर्धन महिलाओं को निशुल्क सिलाई मशीनें देना, हस्तशिल्प प्रशिक्षण देना और उन्हें स्वरोजगार स्थापित कर आत्मनिर्भर बनाने में आर्थिक सहयोग करना।",
-      impact: "350+ आत्मनिर्भर महिलाएं",
-      color: "var(--color-saffron)"
-    },
-    // Animal Welfare
-    {
-      id: 'rescue',
-      category: 'animal',
-      icon: "🚑",
-      title: "पशु एम्बुलेंस व चिकित्सा (Rescue & Medical)",
-      desc: "लखनऊ में दुर्घटनाग्रस्त, बीमार अथवा असहाय लावारिस पशुओं (विशेषकर गौवंश व श्वान) का ऑन-साइट इलाज करना व एम्बुलेंस द्वारा उपचार केंद्र लाना।",
-      impact: "4,200+ उपचारित पशु",
-      color: "var(--color-green)"
+      impact: "350+ आत्मनिर्भर लोग",
+      color: "var(--color-gold)"
     },
     {
-      id: 'feed',
-      category: 'animal',
-      icon: "🌾",
-      title: "दैनिक चारा-पानी व्यवस्था (Feeding Drives)",
-      desc: "भीषण गर्मी में पक्षियों व मूक जानवरों के लिए पानी के सकोरे रखना, नित्य हरा चारा व पशु-आहार की गाड़ियों द्वारा प्रमुख चौराहों व क्षेत्रों में वितरण।",
-      impact: "दैनिक 500+ पशु आहार",
-      color: "var(--color-green)"
-    },
-    {
-      id: 'shelter',
-      category: 'animal',
-      icon: "🏡",
-      title: "सुरक्षित गौ-आश्रय निर्माण (Cattle Shelter)",
-      desc: "सड़कों पर भटकते बेजुबान गौवंश को कड़ाके की ठंड, बरसात व धूप से बचाने के लिए सुरक्षित और स्वच्छ अस्थाई गौ-शालाओं (Shelters) का सहयोग व संचालन।",
-      impact: "850+ संरक्षित गौवंश",
-      color: "var(--color-green)"
-    },
-    {
-      id: 'kindness',
-      category: 'animal',
-      icon: "❤️",
-      title: "जीव दया व करुणा प्रचार (Empathy Campaigns)",
-      desc: "विद्यालयों व मोहल्लों में संगोष्ठियां कर समाज में बेजुबान जीव-जंतुओं के प्रति दया, संवेदनशीलता व संरक्षण के भाव जगाने का विशेष जनजागरण अभियान।",
-      impact: "15,000+ जागरूक नागरिक",
-      color: "var(--color-green)"
+      id: 'relief',
+      category: 'sewa',
+      icon: "🤝",
+      title: "आपातकालीन राहत (Emergency Relief)",
+      desc: "प्राकृतिक आपदाओं, कड़ाके की ठंड या अन्य संकट के समय गर्म कपड़े, राशन किट और बुनियादी आवश्यकताएं प्रदान कर प्रभावित परिवारों की सहायता करना।",
+      impact: "5000+ राहत सामग्री किट",
+      color: "var(--color-maroon)"
     }
   ];
 
@@ -91,7 +71,7 @@ export default function Initiatives({ onDonateClick }) {
     <section id="initiatives" className="initiatives-section section-padding">
       <div className="container">
         {/* Section Header */}
-        <div className={`section-header ${filter === 'animal' ? 'green-header' : ''}`}>
+        <div className={`section-header ${filter === 'sewa' ? 'maroon-header' : ''}`}>
           <span className="subtitle">हमारे निरंतर प्रयास</span>
           <h2>मुख्य सेवा कार्य क्षेत्र</h2>
           <p>श्री श्री श्याम सेवा परिवार फाउंडेशन के माध्यम से संचालित होने वाली मुख्य सामाजिक और कल्याणकारी गतिविधियां:</p>
@@ -105,16 +85,16 @@ export default function Initiatives({ onDonateClick }) {
               सभी सेवा कार्य (All)
             </button>
             <button 
-              className={`filter-btn human-tab ${filter === 'human' ? 'active' : ''}`}
-              onClick={() => setFilter('human')}
+              className={`filter-btn human-tab ${filter === 'bhandara' ? 'active' : ''}`}
+              onClick={() => setFilter('bhandara')}
             >
-              मानव सशक्तिकरण (Human)
+              भंडारा सेवा (Food Distribution)
             </button>
             <button 
-              className={`filter-btn animal-tab ${filter === 'animal' ? 'active' : ''}`}
-              onClick={() => setFilter('animal')}
+              className={`filter-btn animal-tab ${filter === 'sewa' ? 'active' : ''}`}
+              onClick={() => setFilter('sewa')}
             >
-              जीव दया व संरक्षण (Animal)
+              जन सेवा (Community Service)
             </button>
           </div>
         </div>
@@ -137,7 +117,7 @@ export default function Initiatives({ onDonateClick }) {
 
               {/* Decorative Tag */}
               <span className={`category-tag ${item.category}`}>
-                {item.category === 'human' ? 'मानव सेवा' : 'जीव सेवा'}
+                {item.category === 'bhandara' ? 'भंडारा सेवा' : 'जन सेवा'}
               </span>
 
               {/* Card Main Icon */}
@@ -168,7 +148,7 @@ export default function Initiatives({ onDonateClick }) {
             <Sparkles className="cta-sparkle" size={24} />
             <div className="cta-text">
               <h3>इन पुनीत सेवा कार्यों में अपना योगदान दें</h3>
-              <p>आपका एक छोटा सा सहयोग समाज के किसी गरीब को रोटी, किसी बच्चे को शिक्षा और किसी बेजुबान को नया जीवन दे सकता है।</p>
+              <p>आपका एक छोटा सा सहयोग समाज के किसी गरीब को रोटी और जरूरतमंद को नया जीवन दे सकता है।</p>
             </div>
           </div>
           <button className="btn btn-primary btn-lg" onClick={onDonateClick}>
