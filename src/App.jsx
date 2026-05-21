@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MissionVision from './components/MissionVision';
@@ -82,11 +82,11 @@ export default function App() {
           <span className="float-label">सहयोग</span>
         </button>
         <button 
-          className="float-btn float-volunteer" 
+          className="float-btn  float-volunteer" 
           onClick={handleOpenVolunteer}
           title="जुड़ें (Join)"
         >
-          <MessageCircle size={22} fill="currentColor" />
+          <MessageCircle size={22} fill="white" />
           <span className="float-label">जुड़ें</span>
         </button>
       </div>

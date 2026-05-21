@@ -48,7 +48,8 @@ main {
 }
 
 .float-volunteer {
-  background: linear-gradient(135deg, var(--color-green), var(--color-green-mid));
+  background: #017427;
+  /* background: linear-gradient(135deg, var(--color-green), var(--color-green-mid)); */
 }
 .float-volunteer:hover {
   transform: translateY(-4px) scale(1.05);

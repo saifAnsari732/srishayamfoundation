@@ -68,7 +68,7 @@
 
 .navbar-logo-img {
   width: auto;
-  height: 52px; /* Slightly taller for better readability */
+  height: 65px; /* Slightly taller for better readability */
   max-width: 300px;
   object-fit: contain;
   transition: all var(--transition-normal);
