@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Shri Sri Syam Sewa Parivar - Contact Us Section Styles
+   ========================================================================= */
+
+.contact-section {
+  background-color: var(--bg-orange-soft);
+  padding-bottom: 100px;
+}
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.contact-subtitle {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-subtitle {
+    color: var(--text-primary);
+  }
+}
+
+.contact-desc {
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+/* ==========================================================================
+   Contact Details Information Panel
+   ========================================================================== */
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 44px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-details li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+@media (prefers-color-scheme: dark) {
+  .icon-circle {
+    background: rgba(66, 209, 147, 0.1);
+  }
+}
+
+.contact-details li:hover .icon-circle {
+  background: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.contact-details li:hover .icon-circle svg {
+  color: white !important;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-text strong {
+  font-size: 16px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+.detail-text span {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Social Connect Row
+   ========================================================================== */
+
+.contact-social h4 {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.social-icons-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-glow-primary);
+  transition: all var(--transition-fast);
+}
+
+.social-btn:hover {
+  background: var(--color-secondary);
+  box-shadow: var(--shadow-glow-secondary);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   Floating Glass/White Contact Form Panel
+   ========================================================================== */
+
+.contact-form-panel {
+  background: var(--bg-card);
+  padding: 44px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+@media (max-width: 600px) {
+  .contact-form-panel {
+    padding: 30px 20px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    border-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 4px rgba(66, 209, 147, 0.15);
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Message Submission Button */
+.btn-send-message {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-mid));
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow-primary);
+  transition: all var(--transition-fast);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.btn-send-message:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(66, 209, 147, 0.45);
+  filter: brightness(1.05);
+}

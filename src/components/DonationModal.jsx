@@ -67,7 +67,7 @@ export default function DonationModal({ isOpen, onClose }) {
         {/* Header */}
         <div className="modal-header">
           <div className="modal-title-wrapper">
-            <Heart className="header-icon pulse-dot-action saffron" fill="currentColor" size={24} />
+            <Heart className="header-icon pulse-dot-action primary" fill="currentColor" size={24} />
             <div>
               <h3>सहयोग राशि एवं दान (Contribute / Donate)</h3>
               <span className="modal-subtitle">आपका दान बेजुबानों और जरूरतमंदों का संबल है</span>
@@ -230,7 +230,7 @@ export default function DonationModal({ isOpen, onClose }) {
                         <rect x="10" y="75" width="15" height="15" fill="currentColor" />
                         
                         {/* Center peacock placeholder logo */}
-                        <rect x="42" y="42" width="16" height="16" fill="var(--color-saffron)" rx="2" />
+                        <rect x="42" y="42" width="16" height="16" fill="var(--color-primary)" rx="2" />
                         <circle cx="50" cy="50" r="4" fill="var(--color-gold)" />
 
                         {/* Random technical bits represent QR Code noise */}

@@ -1,11 +1,12 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MissionVision from './components/MissionVision';
-import Initiatives from './components/Initiatives';
-import Gallery from './components/Gallery';
 import AboutUs from './components/AboutUs';
-import SocialHub from './components/SocialHub';
+import OurSeva from './components/OurSeva';
+import OurProjects from './components/OurProjects';
+import Gallery from './components/Gallery';
+import Volunteer from './components/Volunteer';
+import ContactUs from './components/ContactUs';
 import DonationModal from './components/DonationModal';
 import VolunteerForm from './components/VolunteerForm';
 import Footer from './components/Footer';
@@ -38,20 +39,23 @@ export default function App() {
           onVolunteerClick={handleOpenVolunteer} 
         />
 
-        {/* Bilingual Mission & Vision */}
-        <MissionVision />
+        {/* About Us Section */}
+        <AboutUs />
 
-        {/* Dynamic Initiatives Checklist */}
-        <Initiatives onDonateClick={handleOpenDonate} />
+        {/* Our Seva Section */}
+        <OurSeva onDonateClick={handleOpenDonate} />
+
+        {/* Dynamic Projects */}
+        <OurProjects onDonateClick={handleOpenDonate} />
 
         {/* Beautiful local image photo gallery */}
         <Gallery />
 
-        {/* Leadership & Corporate Legitimacy */}
-        <AboutUs />
+        {/* Volunteer Section */}
+        <Volunteer />
 
-        {/* Interactive Social Media Hub */}
-        <SocialHub />
+        {/* Contact Us Section */}
+        <ContactUs />
       </main>
 
       {/* Structured Footer */}

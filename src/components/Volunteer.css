@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Shri Sri Syam Sewa Parivar - Volunteer Section Styles
+   ========================================================================= */
+
+.volunteer-section {
+  background: var(--bg-mint-soft);
+  color: var(--text-primary);
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background spiritual ambient accent inside Navy */
+.volunteer-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(66, 209, 147, 0.1);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.volunteer-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .volunteer-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.volunteer-title {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+
+.volunteer-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+}
+
+/* Checkmark requirement bullets list */
+.volunteer-requirements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.volunteer-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15.5px;
+  color: var(--text-primary);
+}
+
+.req-icon {
+  color: var(--color-mint-accent);
+  flex-shrink: 0;
+  background: rgba(66, 209, 147, 0.15);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* ==========================================================================
+   Floating Volunteer Registration Form Container
+   ========================================================================== */
+
+.volunteer-form-container {
+  background: var(--bg-card);
+  padding: 44px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-glass);
+}
+
+@media (max-width: 600px) {
+  .volunteer-form-container {
+    padding: 30px 20px;
+  }
+}
+
+.volunteer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.volunteer-form .form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+@media (prefers-color-scheme: dark) {
+  .volunteer-form .form-group input {
+    border-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+.volunteer-form .form-group input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 4px rgba(66, 209, 147, 0.15);
+}
+
+.volunteer-form .form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Submission Button */
+.btn-submit-volunteer {
+  background: linear-gradient(135deg, var(--color-mint-accent), #2eb078);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(66, 209, 147, 0.3);
+  transition: all var(--transition-fast);
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+.btn-submit-volunteer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(66, 209, 147, 0.45);
+  filter: brightness(1.05);
+}

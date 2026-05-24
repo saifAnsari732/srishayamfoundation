@@ -50,7 +50,7 @@
 }
 
 .method-btn.active {
-  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-mid));
+  background: linear-gradient(135deg, var(--color-mint-accent), #2eb078);
   color: var(--text-white);
   box-shadow: var(--shadow-sm);
 }
@@ -99,13 +99,13 @@
 }
 
 .preset-btn:hover {
-  background: var(--color-saffron-light);
-  color: var(--color-saffron);
-  border-color: rgba(230, 81, 0, 0.15);
+  background: rgba(66, 209, 147, 0.1);
+  color: var(--color-mint-accent);
+  border-color: rgba(66, 209, 147, 0.3);
 }
 
 .preset-btn.active {
-  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-mid));
+  background: linear-gradient(135deg, var(--color-mint-accent), #2eb078);
   color: var(--text-white);
   border-color: transparent;
   box-shadow: var(--shadow-sm);
@@ -224,13 +224,13 @@
 }
 
 .upi-id-label { color: var(--text-secondary); }
-.upi-id-value { color: var(--color-saffron); font-weight: 700; }
+.upi-id-value { color: var(--color-primary); font-weight: 700; }
 
 .qr-notices {
   padding: 12px 18px;
   border-radius: var(--radius-sm);
-  border-color: rgba(230, 81, 0, 0.1);
-  background: rgba(230, 81, 0, 0.02);
+  border-color: rgba(66, 209, 147, 0.15);
+  background: rgba(66, 209, 147, 0.03);
   font-size: 12.5px;
   color: var(--text-secondary);
   line-height: 1.5;
@@ -286,14 +286,14 @@
 .bank-value.account-no,
 .bank-value.ifsc {
   font-family: var(--mono);
-  color: var(--color-saffron);
+  color: var(--color-primary);
 }
 
 .tax-cert-card {
   padding: 16px 20px;
   border-radius: var(--radius-md);
-  border-color: rgba(230, 81, 0, 0.1);
-  background: rgba(230, 81, 0, 0.02);
+  border-color: rgba(66, 209, 147, 0.15);
+  background: rgba(66, 209, 147, 0.03);
   display: flex;
   gap: 14px;
   align-items: flex-start;
@@ -413,7 +413,7 @@
 .receipt-amount-highlight {
   font-size: 18px;
   font-weight: 800;
-  color: var(--color-saffron) !important;
+  color: var(--color-primary) !important;
 }
 
 .success-pill {
@@ -442,4 +442,24 @@
 
 .receipt-actions button {
   flex: 1;
+}
+
+/* Custom Mint Green overrides for Donation Modal */
+.donation-modal-card .btn-primary,
+.payment-success-wrapper .btn-primary {
+  background: linear-gradient(135deg, var(--color-mint-accent), #2eb078) !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(66, 209, 147, 0.3) !important;
+}
+
+.donation-modal-card .btn-primary:hover,
+.payment-success-wrapper .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(66, 209, 147, 0.45) !important;
+  filter: brightness(1.05);
+}
+
+.header-icon.primary {
+  color: var(--color-mint-accent) !important;
 }

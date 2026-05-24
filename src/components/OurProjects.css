@@ -1,0 +1,253 @@
+/* ==========================================================================
+   24/7 Bhandara - Premium Projects Section Styles (Orange & Navy)
+   ========================================================================= */
+
+.projects-section {
+  background-color: var(--bg-orange-soft);
+  padding: 80px 0;
+  position: relative;
+}
+
+.project-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1.9fr;
+  gap: 50px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1100px) {
+  .project-split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ==========================================================================
+   Left Column: Information Text & 4 Gold Feature Badges
+   ========================================================================== */
+
+.project-description-block {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.project-subtitle {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--color-mint-accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.project-title-large {
+  font-family: var(--font-sans);
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.project-desc-paragraph {
+  font-size: 15.5px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+/* 2x2 Custom Badges Grid */
+.project-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+}
+
+@media (max-width: 480px) {
+  .project-features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.project-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-circle-gold {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(230, 81, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .feature-circle-gold {
+    background: rgba(230, 81, 0, 0.12);
+  }
+}
+
+.feature-texts {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.feat-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.feat-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Right Column: 3 Columns Grid of Project Card Mockups
+   ========================================================================== */
+
+.project-cards-grid-block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-cards-grid-block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .project-cards-grid-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card-mockup {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-mockup:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(66, 209, 147, 0.3); /* Mint green border on hover */
+}
+
+/* Image scaling wrapper */
+.card-image-wrapper {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card-mockup:hover .card-image {
+  transform: scale(1.06);
+}
+
+/* Card details panel */
+.card-contents {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-title-main {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card-desc-sub {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+/* Outlined viewing button */
+.btn-view-details-mockup {
+  background: transparent;
+  border: 1.5px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  align-self: flex-start;
+  letter-spacing: 0.2px;
+}
+
+.btn-view-details-mockup:hover {
+  background: var(--color-mint-accent);
+  color: white;
+  border-color: var(--color-mint-accent);
+  box-shadow: 0 4px 15px rgba(66, 209, 147, 0.4);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Full-Width Dark Navy Banner Underneath
+   ========================================================================== */
+
+.dark-cta-banner {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-mid));
+  color: white;
+  padding: 44px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* Edge-to-edge stretch */
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-cta-banner::before {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -5%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(230, 81, 0, 0.05);
+  filter: blur(25px);
+  pointer-events: none;
+}

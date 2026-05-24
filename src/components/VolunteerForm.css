@@ -42,8 +42,8 @@
   gap: 16px;
 }
 
-.header-icon.saffron {
-  color: var(--color-saffron);
+.header-icon.primary {
+  color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -85,8 +85,8 @@
 }
 
 .modal-close-btn:hover {
-  background: rgba(230, 81, 0, 0.1);
-  color: var(--color-saffron);
+  background: rgba(66, 209, 147, 0.15);
+  color: var(--color-primary);
   transform: rotate(90deg);
 }
 
@@ -199,4 +199,24 @@
   line-height: 1.6;
   max-width: 460px;
   margin-bottom: 32px;
+}
+
+/* Custom Mint Green overrides for Volunteer Form Modal */
+.volunteer-modal-card .btn-primary,
+.success-screen-wrapper .btn-primary {
+  background: linear-gradient(135deg, var(--color-mint-accent), #2eb078) !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(66, 209, 147, 0.3) !important;
+}
+
+.volunteer-modal-card .btn-primary:hover,
+.success-screen-wrapper .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(66, 209, 147, 0.45) !important;
+  filter: brightness(1.05);
+}
+
+.header-icon.primary {
+  color: var(--color-mint-accent) !important;
 }

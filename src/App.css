@@ -40,20 +40,19 @@ main {
 }
 
 .float-donate {
-  background: linear-gradient(135deg, var(--color-saffron), var(--color-saffron-mid));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-mid));
 }
 .float-donate:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 15px 30px -5px rgba(230, 81, 0, 0.4);
+  box-shadow: 0 15px 30px -5px rgba(66, 209, 147, 0.45);
 }
 
 .float-volunteer {
-  background: #017427;
-  /* background: linear-gradient(135deg, var(--color-green), var(--color-green-mid)); */
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-mid));
 }
 .float-volunteer:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 15px 30px -5px rgba(27, 94, 32, 0.4);
+  box-shadow: 0 15px 30px -5px rgba(28, 42, 58, 0.4);
 }
 
 .float-label {

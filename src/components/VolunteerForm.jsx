@@ -77,7 +77,7 @@ export default function VolunteerForm({ isOpen, onClose }) {
         {/* Header */}
         <div className="modal-header">
           <div className="modal-title-wrapper">
-            <HelpingHand className="header-icon saffron" size={24} />
+            <HelpingHand className="header-icon primary" size={24} />
             <div>
               <h3>स्वयंसेवक पंजीकरण (Join as Volunteer)</h3>
               <span className="modal-subtitle">श्री श्याम सेवा परिवार से जुड़कर पुण्य कमाएं</span>
